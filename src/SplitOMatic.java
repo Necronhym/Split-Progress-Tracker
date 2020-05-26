@@ -26,18 +26,24 @@ class Window extends JFrame implements KeyListener, MouseListener
 			}
 		@Override public void keyPressed(KeyEvent e)
 			{
-				if(e.getKeyCode() == 61)
+				if(e.getKeyCode() == 107)
 					{
 						CurrentInt = (CurrentInt%NumberOfSplits) + 1;
 					}
-				if(e.getKeyCode() == 45)
+				if(e.getKeyCode() == 109)
 					{
 						CurrentInt = 1;
+					}
+				if(e.getKeyCode() == 106)
+					{
+						CurrentInt = 1;
+						BestInt = 1;
 					}
 				if(CurrentInt > BestInt)
 					{
 						BestInt = (BestInt%NumberOfSplits) + 1;
 					}
+
 				Current.setBounds(300-75, CurrentInt*30,30, 30);
 				PersonalBest.setBounds(300-40, BestInt*30, 30, 30);
 			}
